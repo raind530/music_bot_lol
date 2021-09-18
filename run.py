@@ -184,6 +184,7 @@ def bugger_off(msg="Press enter to continue . . .", code=1):
     input(msg)
     sys.exit(code)
 
+
 def opt_check_disk_space(warnlimit_mb=200):
     if disk_usage('.').free < warnlimit_mb*1024*2:
         log.warning("Less than %sMB of free space remains on this device" % warnlimit_mb)
@@ -198,9 +199,6 @@ def pyexec(pycom, *args, pycom2=None):
 
 def main():
     # TODO: *actual* argparsing
-
-    if '--no-checks' not in sys.argv:
-        sanity_checks()
 
     finalize_logging()
 
