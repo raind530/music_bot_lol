@@ -180,8 +180,6 @@ def finalize_logging():
     dlog.addHandler(dlh)
 
 
-def bugger_off(msg="Press enter to continue . . .", code=1):
-    sys.exit(code)
 
 
 # TODO: all of this
